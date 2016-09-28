@@ -1,0 +1,12 @@
+{
+    "plain": "plain text password",
+    "private": "ENC:crqXZMtzFsDDoGPU+yYAWLnx0zciiOWotanJ02xV4a7+T6kt/R1We0JU55PRfp1p/9T5+4HLgH9wT7/WcqNY+z4VPMU10w+j5C3tZXDqwtvqdH8ns1HD8MxDl5MlhKU181MDSz/LbIkwI3f1LK0hUFJe6LdY3phZm2qPmJJh941DG7wyv88mnwtXrg42e2187j4DkaH0CZLOP5GkHujO/ajR9HWnz7nQ3hdLDJo36KxGNySRGE8yd6NmYcPbjxzoZtRSstZKjQiCTAOQBiEQSELc51LlLqmdVWzChMSnVCLKaPq5XvSsH+jO7dbngUiV+M8SaucwKcA76zLyfaZz7w==",
+    "subTree": {
+        "other": "thing",
+        "one": [
+            "apple",
+            "banana",
+            "ENC:L+pV1oeK2iKYlLgETySyePLndv30icJdpU+qof/L2+s08Rp4vIJf0Q2JpbF3xuJMANBvW2yhjp2YRgjzxkkQpZN98O+1do25HEeGADeQ+xgTS4ExVrr3SojLLRxGyQlceXYduvBiJpsE0bp+8+s7mXCJ32Ci19NkosTrhwcNMkWyKZAcdG34iQZVeo0C0u621lDycZs/IqRwyMu0jPg1FLDvpCGaYju3Jumj6mXXGVR0r5gLXVidIdWQxGIojCvSdSZ7IK25eCFe27UJn1Onkb08C5pKyBVwGoaFhiYeWAZ2PgYjCPFynuhWNhf4bwNmpvdaDyw4+n6DRuT07jN59Q=="
+        ]
+    }
+}
