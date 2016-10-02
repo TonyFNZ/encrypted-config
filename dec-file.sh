@@ -7,7 +7,7 @@ while getopts ":k:h" opt; do
         h)
             echo "dec-file.sh - output the contents of a file and decrypt any encrypted strings found"
             echo "Encrypted strings must be prefixed with \"ENC:\" and must not have two on a single line"
-            echo "Current user's private key is used for decryption by default. dec.sh must exist in the same folder as dec-file.sh"
+            echo "Current user's private key is used for decryption by default."
             echo ""
             echo "Usage: dec-file.sh [-k <pem key file>] <file>"
             exit 0
