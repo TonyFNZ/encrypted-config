@@ -1,5 +1,40 @@
 #! /bin/bash
 
+key="$HOME/.ssh/id_rsa" # default encryption key
+
+while getopts ":k:h" opt; do
+    case $opt in
+        h)
+            echo "dec-file.sh - output the contents of a file and decrypt any encrypted strings found"
+            echo "Encrypted strings must be prefixed with \"ENC:\" and must not have two on a single line"
+            echo "Current user's private key is used for decryption by default. dec.sh must exist in the same folder as dec-file.sh"
+            echo ""
+            echo "Usage: dec-file.sh [-k <pem key file>] <file>"
+            exit 0
+            ;;
+        k)
+            key="$OPTARG"
+            ;;
+        :)
+            echo "Option -$OPTARG requires an argument." >&2
+            exit 1
+            ;;
+        \?)
+            echo "Invalid option: -$OPTARG" >&2
+            exit 1
+            ;;
+    esac
+done
+
+shift $((OPTIND-1))
+
+if [ "$#" == "0" ]; then
+    echo "File to decrypt not specified.  Pass -h for help"
+    exit 1
+fi
+
+
+
 IFS='' # Keep leading spaces in source
 while read line; do
 
@@ -15,7 +50,7 @@ while read line; do
     if [ "$idx" -gt "0" ]; then
         encVal=${encVal:0:($idx-1)}
     fi
-    decVal=`./dec.sh $encVal`
+    decVal=`./dec.sh -k "$key" "$encVal"`
 
     newLine=`echo $line | sed -n "s|ENC:$encVal|$decVal|p"`
 
