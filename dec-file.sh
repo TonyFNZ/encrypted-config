@@ -50,7 +50,7 @@ while read line; do
     if [ "$idx" -gt "0" ]; then
         encVal=${encVal:0:($idx-1)}
     fi
-    decVal=`./dec.sh -k "$key" "$encVal"`
+    decVal=`echo -n $encVal | base64 -D | openssl rsautl -inkey $key -decrypt`
 
     newLine=`echo $line | sed -n "s|ENC:$encVal|$decVal|p"`
 

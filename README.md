@@ -46,7 +46,7 @@ Usage: `./dec.sh [-k <pem key file>] <string>`
 Output the contents of a file and decrypt any encrypted strings found.
 Encrypted strings must be prefixed with `ENC:` and must not have two on a single line.
 
-Current user's private key is used for decryption by default. dec.sh must exist in the same folder as dec-file.sh
+Current user's private key is used for decryption by default.
 
 Usage: `dec-file.sh [-k <pem key file>] <file>`
 
